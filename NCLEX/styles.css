@@ -22,15 +22,6 @@ body {
   background: #f1f2f7;
 }
 
-/* container section */
-/* .container {
-  display: grid;
-  width: 100%;
-  margin: 0 auto;
-  gap: 1.8rem;
-  grid-template-columns: 16rem 1fr;
-} */
-
 .container {
   display: flex;
   width: 100%;
@@ -349,12 +340,6 @@ main {
   gap: 1rem;
 }
 
-/* .cards {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 26px;
-} */
-
 .default {
   display: flex;
   justify-content: space-between;
@@ -377,10 +362,6 @@ main {
 .card-number {
   font-size: 20px;
 }
-
-/* .right{
-  margin-bottom: 20px;
-} */
 
 .all-q {
   color: #a155b9;
@@ -426,7 +407,6 @@ main {
 
 .statistics {
   margin-top: 15px;
-  flex: 1;
   height: 300px;
   border-radius: 5px;
   box-shadow: 0px 3px 5px #44525c1a;
@@ -729,6 +709,12 @@ main {
 }
 
 /* media query  */
+@media screen and (max-width: 1500px) {
+  .statistics {
+    flex: 1;
+  }
+}
+
 @media screen and (max-width: 1300px) {
   /* aside section */
   aside {
@@ -783,12 +769,20 @@ main {
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 5px;
   }
+
+  .statistics {
+    flex: 1;
+  }
 }
 
 @media screen and (max-width: 1000px) {
   .cards {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 5px;
+  }
+
+  .statistics {
+    flex: 1;
   }
 }
 
@@ -814,5 +808,11 @@ main {
 
   .create-btn {
     margin-top: 20px;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .statistics {
+    flex: 1;
   }
 }
