@@ -40,7 +40,9 @@ aside {
   background: #ffffff;
   position: fixed;
   width: 220px;
-  height: 100vh;
+  height: 100%;
+  top: 0;
+  bottom: 0;
 }
 
 aside .top {
@@ -219,6 +221,7 @@ main {
   width: calc(100% - 220px);
   margin-left: 220px;
   padding: 0 20px;
+  overflow: auto;
 }
 
 /* top-right section */
@@ -417,6 +420,8 @@ main {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 1rem;
+  max-width: 100%;
+  overflow: auto;
 }
 
 .statistics {
@@ -545,6 +550,8 @@ main {
   flex-wrap: wrap;
   gap: 1rem;
   margin-bottom: 20px;
+  max-width: 100%;
+  overflow: auto;
 }
 
 .test-container {
