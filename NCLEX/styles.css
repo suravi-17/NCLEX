@@ -34,6 +34,8 @@ aside {
   height: 100%;
   top: 0;
   bottom: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 aside .top {
@@ -64,6 +66,7 @@ aside .sidebar {
   display: flex;
   flex-direction: column;
   position: relative;
+  flex: 1;
 }
 
 aside .sidebar .sidebar-title {
@@ -115,9 +118,8 @@ aside .sidebar a:hover:not(.select) {
   border-radius: 5px;
   box-shadow: 0px 3px 5px #44525c1a;
   height: 218px;
-  margin: 0 auto;
+  margin: auto;
   justify-content: center;
-  margin-top: 100px;
   width: 185px;
 }
 
@@ -190,6 +192,10 @@ aside .sidebar a:hover:not(.select) {
 
 .profile {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto 0 1.5rem;
 }
 
 #profile-img {
@@ -205,6 +211,10 @@ aside .sidebar a:hover:not(.select) {
 
 .grey {
   color: #4a596c;
+}
+
+.name {
+  margin-left: 10px;
 }
 
 /* main section */
@@ -412,6 +422,7 @@ main {
   box-shadow: 0px 3px 5px #44525c1a;
   background: #ffffff;
   padding: 15px 20px;
+  flex: 1;
 }
 
 .top-section {
@@ -751,11 +762,7 @@ main {
     display: none;
   }
 
-  aside .sidebar a:last-child {
-    top: 250px;
-  }
-
-  aside .sidebar a:last-child p {
+  aside .sidebar .profile .name {
     display: none;
   }
 
@@ -810,9 +817,9 @@ main {
     margin-top: 20px;
   }
 }
-
-@media screen and (min-width: 1500px) {
-  .statistics {
+/* 
+@media screen and (min-width: 1510px) {
+  .subject-lesson {
     flex: 1;
   }
-}
+} */
