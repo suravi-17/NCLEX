@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- material icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+
+    <!-- dashboard icon -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+
+    <!-- Previous test icon -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+
+    <!-- notes icon -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+
+    <!-- my classes icon -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+
+    <!-- hamburger menu icon -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+
+    <!-- bell icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <!-- logout icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <!-- google font (inter) and (quicksand)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    
+    <!-- apache e-chart -->
+    <script charset="utf-8" src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.2.1/dist/echarts.min.js"></script>
+  
+    
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="test.css" />
+    <title>Previous Test</title>
+  </head>
+  <body>
+      <div class="container">
+      <aside>
+        <div class="top">
+          <div class="logo">
+            <img src="images/logo.png" />
+          </div>
+          <div class="divider"></div>
+          <div class="hamburger-menu">
+            <a href="#">
+              <span class="material-symbols-rounded"> menu </span>
+            </a>
+          </div>
+        </div>
+        <div class="sidebar">
+          <a href="index.html" class="icon-title select">
+            <span class="material-symbols-rounded"> dashboard </span>
+            <p class="sidebar-title">Dashboard</p>
+          </a>
+          <a href="test.html" class="icon-title">
+            <span class="material-symbols-rounded"> description </span>
+            <p class="sidebar-title">Previous Test</p>
+          </a>
+          <a href="#" class="icon-title">
+            <span class="material-symbols-rounded"> edit_square </span>
+            <p class="sidebar-title">Notes</p>
+          </a>
+          <a href="#" class="icon-title">
+            <span class="material-symbols-rounded"> videocam </span>
+            <p class="sidebar-title">My Classes</p>
+          </a>
+          <div class="subscribe-card">
+            <div class="overlap">
+              <img class="vector-design" src="vector.svg" alt="curve vector design in lavender color"></img>
+              <div class="subscribe">
+                <div class="subscription">Subscription</div>
+                <p class="access-to-all">Get access to all<br/>mock tests for <br/>better preparation</p>
+                <button class="subscribe-btn">Subscribe</button>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="profile">
+            <img id="profile-img" src="images/profile.jpg" />
+            <div>
+              <p class="sidebar-title blue">Sumi Pradhan</p>
+              <p class="grey">Student</p>
+            </div>
+          </a>
+        </div>
+      </aside>
+      <main>
+        <div class="top-right">
+          <a href="#" class="blue"><span class="material-symbols-rounded">notifications</span></a>
+          <div class="divider"></div>
+          <a href="#" class="logout blue">
+            <span class="material-symbols-rounded">logout</span>
+            <p>Logout</p>
+          </a>
+        </div>
+        <div class="breadcrumbs">
+          <span class="product-title">Product</span>
+          <div class="arrow"></div>
+          <span class="breadcrumb-title">Previous Test</span>
+        </div>
+        <p class="title">Previous Tests</p>
+        <div class="test-dropdown">
+          <div class="dropdown">
+            <div class="pick">
+              <span class="picked">Select Test Mode</span>
+              <div class="caret"></div>
+            </div>
+            <ul class="menu">
+              <li class="active">ALL</li>
+              <li>Tutor</li>
+              <li>CAT</li>
+              <li>Timed</li>
+            </ul>
+          </div>
+          <div class="dropdown">
+            <div class="pick">
+              <span class="picked">Select Status</span>
+              <div class="caret"></div>
+            </div>
+            <ul class="menu">
+              <li class="active">ALL</li>
+              <li>Tutor</li>
+              <li>CAT</li>
+              <li>Timed</li>
+            </ul>
+          </div>
+          <div>
+            <a href="#" class="search"><span class="material-symbols-rounded">search</span></a>
+          </div>
+        </div> 
+        <table class="table">
+          <thead>
+            <tr>
+                <th>S.No.</th>
+                <th>Score</th>
+                <th>Test ID</th>
+                <th>Date</th>
+                <th>Modes</th>
+                <th>Total Questions</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="color-grey">
+                <td>1</td>
+                <td>0/77 (0%)</td>
+                <td>9743</td>
+                <td>May 30, 2023</td>
+                <td class="cat">CAT</td>
+                <td>25</td>
+                <td class="bookmark"><span class="material-symbols-rounded">bookmark</span></td>
+                <td class="orange-color"><span class="material-symbols-rounded">resume</span></td>
+            </tr>
+            <tr class="color-grey">
+                <td>2</td>
+                <td>0/1 (0%)</td>
+                <td>9752</td>
+                <td>June 2, 2023</td>
+                <td class="cat">CAT</td>
+                <td>1</td>
+                <td class="incorrect"><span class="material-symbols-rounded">cancel</span></td>
+                <td class="purple-color"><a href="details.html"><span class="material-symbols-rounded">description</span></a></td>
+            </tr>
+            <tr class="color-grey">
+                <td>3</td>
+                <td>0/1 (0%)</td>
+                <td>9654</td>
+                <td>June 4, 2023</td>
+                <td class="cat">CAT</td>
+                <td>1</td>
+                <td class="incorrect"><span class="material-symbols-rounded">cancel</span></td>
+                <td class="purple-color"><span class="material-symbols-rounded">description</span></td>
+            </tr>
+            <tr class="color-grey">
+                <td>4</td>
+                <td>40/50 (90%)</td>
+                <td>9854</td>
+                <td>June 6, 2023</td>
+                <td class="cat">CAT</td>
+                <td>50</td>
+                <td class="correct"><span class="material-symbols-rounded">check_circle</span></td>
+                <td class="purple-color"><span class="material-symbols-rounded">description</span></td>
+            </tr>
+            <tr class="color-grey">
+                <td>5</td>
+                <td>0/25 (0%)</td>
+                <td>9842</td>
+                <td>June 8, 2023</td>
+                <td class="tutor">TUTOR</td>
+                <td>25</td>
+                <td class="orange-color"><span class="material-symbols-rounded">hourglass_empty</span></td>
+                <td class="purple-color"><span class="material-symbols-rounded">description</span></td>
+            </tr>
+            <tr class="color-grey">
+                <td>6</td>
+                <td>0/77 (0%)</td>
+                <td>9743</td>
+                <td>May 30, 2023</td>
+                <td class="cat">CAT</td>
+                <td>25</td>
+                <td class="bookmark"><span class="material-symbols-rounded">bookmark</span></td>
+                <td class="orange-color"><span class="material-symbols-rounded">resume</span></td>
+            </tr>
+            <tr class="color-grey">
+                <td>7</td>
+                <td>0/1 (0%)</td>
+                <td>9752</td>
+                <td>June 2, 2023</td>
+                <td class="cat">CAT</td>
+                <td>1</td>
+                <td class="incorrect"><span class="material-symbols-rounded">cancel</span></td>
+                <td class="purple-color"><span class="material-symbols-rounded">description</span></td>
+            </tr>
+            <tr class="color-grey">
+                <td>8</td>
+                <td>0/1 (0%)</td>
+                <td>9654</td>
+                <td>June 4, 2023</td>
+                <td class="cat">CAT</td>
+                <td>1</td>
+                <td class="incorrect"><span class="material-symbols-rounded">cancel</span></td>
+                <td class="purple-color"><span class="material-symbols-rounded">description</span></td>
+            </tr>
+            <tr class="color-grey">
+                <td>9</td>
+                <td>40/50 (90%)</td>
+                <td>9854</td>
+                <td>June 6, 2023</td>
+                <td class="cat">CAT</td>
+                <td>50</td>
+                <td class="correct"><span class="material-symbols-rounded">check_circle</span></td>
+                <td class="purple-color"><span class="material-symbols-rounded">description</span></td>
+            </tr>
+            <tr class="color-grey">
+                <td>10</td>
+                <td>0/25 (0%)</td>
+                <td>9842</td>
+                <td>June 8, 2023</td>
+                <td class="tutor">TUTOR</td>
+                <td>25</td>
+                <td class="orange-color"><span class="material-symbols-rounded">hourglass_empty</span></td>
+                <td class="purple-color"><span class="material-symbols-rounded">description</span></td>
+            </tr>  
+          </tbody>    
+        </table>
+        <div class="pagination">
+          <a href="#">&laquo;</a>
+          <a class="active-page" href="#">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a href="#">4</a>
+          <a href="#">...</a>
+          <a href="#">15</a>
+          <a href="#">&raquo;</a>
+        </div>
+      </main>
+    </div>
+    
+    <!-- dropdown   -->
+    <script>
+      const dropdowns = document.querySelectorAll('.dropdown');
+      // loop through all dropdown elements
+      dropdowns.forEach(dropdown => {
+        const pick = dropdown.querySelector('.pick');
+        const caret = dropdown.querySelector('.caret');
+        const menu = dropdown.querySelector('.menu');
+        const options = dropdown.querySelectorAll('.menu li');
+        const picked = dropdown.querySelector('.picked');
+
+        pick.addEventListener('click', () => {
+          pick.classList.toggle('pick-selected');
+          caret.classList.toggle('caret-rotate');
+          menu.classList.toggle('menu-open');
+        });
+
+        // loop through all option elements
+        options.forEach(option => {
+          option.addEventListener('click', () => {
+            picked.innerText = option.innerText;
+            pick.classList.remove('pick-selected');
+            caret.classList.remove('caret-rotate');
+            menu.classList.remove('menu-open');
+            options.forEach(option => {
+              option.classList.remove('active');
+            });
+            option.classList.add('active');
+          });
+        });
+      });
+    </script> 
+  </body>
+</html>

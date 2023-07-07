@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- material icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+
+    <!-- dashboard icon -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,600,0,0"
+    />
+
+    
+
+    <!-- google font (inter) and (quicksand)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- apache e-chart -->
+    <script charset="utf-8" src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.2.1/dist/echarts.min.js"></script>
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="test.css" />
+    <title>Test Details</title>
+  </head>
+  <body>
+    <div class="container">
+      <aside>
+        <div class="top">
+          <div class="logo">
+            <img src="images/logo.png" />
+          </div>
+          <div class="divider"></div>
+          <div class="hamburger-menu">
+            <a href="#">
+              <span class="material-symbols-rounded"> menu </span>
+            </a>
+          </div>
+        </div>
+        <div class="sidebar">
+          <a href="index.html" class="icon-title select">
+            <span class="material-symbols-rounded"> dashboard </span>
+            <p class="sidebar-title">Dashboard</p>
+          </a>
+          <a href="test.html" class="icon-title">
+            <span class="material-symbols-rounded"> description </span>
+            <p class="sidebar-title">Previous Test</p>
+          </a>
+          <a href="#" class="icon-title">
+            <span class="material-symbols-rounded"> edit_square </span>
+            <p class="sidebar-title">Notes</p>
+          </a>
+          <a href="#" class="icon-title">
+            <span class="material-symbols-rounded"> videocam </span>
+            <p class="sidebar-title">My Classes</p>
+          </a>
+          <div class="subscribe-card">
+            <div class="overlap">
+              <img class="vector-design" src="vector.svg" alt="curve vector design in lavender color"></img>
+              <div class="subscribe">
+                <div class="subscription">Subscription</div>
+                <p class="access-to-all">Get access to all<br/>mock tests for <br/>better preparation</p>
+                <button class="subscribe-btn">Subscribe</button>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="profile">
+            <img id="profile-img" src="images/profile.jpg" />
+            <div>
+              <p class="sidebar-title blue">Sumi Pradhan</p>
+              <p class="grey">Student</p>
+            </div>
+          </a>
+        </div>
+      </aside>
+      <main>
+        <div class="top-right">
+          <a href="#" class="blue"><span class="material-symbols-rounded">notifications</span></a>
+          <div class="divider"></div>
+          <a href="#" class="logout blue">
+            <span class="material-symbols-rounded">logout</span>
+            <p>Logout</p>
+          </a>
+        </div>
+        <div class="breadcrumbs">
+          <span class="product-title">Product</span>
+          <div class="arrow"></div>
+          <span class="product-title">Previous Test</span>
+          <div class="arrow"></div>
+          <span class="breadcrumb-title">Test Details</span>
+        </div>
+        <div class="test-details">
+            <p class="title">Test Details</p>
+            <button class="review-test-btn">Review Test</button>
+        </div>
+         
+        <table class="table">
+          <thead>
+            <tr>
+                <th>Status</th>
+                <th class="pos-title">Pos.<p class="id-title">Q.ID</p></th>
+                <th>Subject</th>
+                <th>Lesson</th>
+                <th>Score</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="color-grey">
+                <td class="orange-color"><span class="material-symbols-rounded">do_not_disturb_on</span></td>
+                <td class="pos-title">1 <p class="id-no">9743</p></td>
+                <td>Reduction of Risk Potential</td>
+                <td>Potential for Alternations in Body Systems</td>
+                <td>25/77</td>
+            </tr>
+            <tr class="color-grey">
+                <td class="correct"><span class="material-symbols-rounded">check_circle</span></td>
+                <td class="pos-title">2 <p class="id-no">9733</p></td>
+                <td>Physiological Adaptation</td>
+                <td>Medical Emergencies</td>
+                <td>80/100</td>
+            </tr>
+            <tr class="color-grey">
+                <td class="incorrect"><span class="material-symbols-rounded">cancel</span></td>
+                <td class="pos-title">3 <p class="id-no">9553</p></td>
+                <td>Health Promotion and Maintainance</td>
+                <td>Disease Prevention</td>
+                <td>30/77</td>
+            </tr>
+            <tr class="color-grey">
+                <td class="correct"><span class="material-symbols-rounded">check_circle</span></td>
+                <td class="pos-title">4 <p class="id-no">9753</p></td>
+                <td>Physiological Adaptation</td>
+                <td>Alternations in Body Systems</td>
+                <td>40/50</td>
+            </tr>
+            <tr class="color-grey">
+                <td class="incorrect"><span class="material-symbols-rounded">cancel</span></td>
+                <td class="pos-title">5 <p class="id-no">9763</p></td>
+                <td>Management of Care</td>
+                <td>Priortization</td>
+                <td>10/65</td>
+            </tr>
+             
+          </tbody>    
+        </table>
+      </main>
+    </div>
+  </body>
+</html>
