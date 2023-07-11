@@ -753,6 +753,7 @@ main {
   height: 100vh;
   z-index: 10;
 }
+
 /* add notes overlay */
 .add-notes {
   position: absolute;
@@ -809,12 +810,6 @@ body.active-add-notes .add-notes {
 .line {
   margin-top: 17px;
   border-top: 1px solid #4a596c;
-}
-
-.notes-dropdown {
-  margin-top: 25px;
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .topic {
