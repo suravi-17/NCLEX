@@ -196,6 +196,7 @@ aside .sidebar a:hover:not(.select) {
   justify-content: center;
   align-items: center;
   margin: auto 0 1.5rem;
+  cursor: pointer;
 }
 
 #profile-img {
@@ -611,7 +612,7 @@ main {
   border-collapse: collapse;
   margin: 25px 0;
   width: 100%;
-  table-layout: fixed;
+  /* table-layout: fixed; */
   /* min-width: 800px; */
   box-shadow: 0px 3px 5px #44525c1a;
   /* border-radius: 5px;
@@ -719,6 +720,221 @@ main {
   border-radius: 50%;
 }
 
+/* notes css */
+.dropdown-btn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+#notes-btn {
+  margin-top: 10px;
+}
+
+.notes-dropdown {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.white {
+  background: #ffffff;
+}
+
+.sort-order {
+  width: 200px;
+}
+
+.overlay-container {
+  visibility: hidden;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+}
+/* add notes overlay */
+.add-notes {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.1);
+  z-index: 20;
+}
+
+.add-notes > * {
+  margin: 5px 0px;
+}
+
+.add-notes .exit {
+  width: 20px;
+  height: 20px;
+  color: #222222;
+  cursor: pointer;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+body.active-add-notes {
+  overflow: hidden;
+}
+
+body.active-add-notes .overlay-container {
+  filter: grayscale(50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: filter 200ms ease-in-out;
+  visibility: visible;
+}
+
+body.active-add-notes .add-notes {
+  top: 50%;
+}
+
+.title-icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.notes-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #4a596c;
+}
+
+.line {
+  margin-top: 17px;
+  border-top: 1px solid #4a596c;
+}
+
+.notes-dropdown {
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.topic {
+  font-weight: 500;
+  color: #404bda;
+}
+
+.notes-border {
+  margin-top: 20px;
+  border: 1px solid #404bda;
+  height: 300px;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.random {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  color: #4a596c;
+  align-items: center;
+}
+
+.space {
+  margin-right: 25px;
+}
+
+.normal-dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ececec;
+  padding: 5px;
+}
+
+.notes {
+  margin-top: 15px;
+  font-style: italic;
+  color: #839bb9;
+}
+
+.save-btn {
+  float: right;
+  width: 96px;
+  background: #404bda;
+  color: #ffffff;
+  padding: 12px 27px;
+  border-radius: 5px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+/* my classes css */
+.videos {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.video-container {
+  width: 33.33%;
+  padding: 10px;
+}
+
+.thumbnail {
+  width: 100%;
+  height: 260px;
+  position: relative;
+}
+
+.thumbnail::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  top: 0;
+  left: 0;
+}
+
+.icon span {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  color: #ffffff;
+  font-size: 45px;
+  z-index: 1;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.vid-title {
+  position: absolute;
+  bottom: 40px;
+  left: 15px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-weight: 00;
+  color: #ffffff;
+  text-shadow: 1px 1px #222222;
+  z-index: 1;
+}
+
+.vid-subtitle {
+  position: absolute;
+  bottom: 18px;
+  left: 15px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  color: #165baa;
+  text-shadow: 1px 1px #222222;
+  z-index: 1;
+}
+
 /* media query  */
 @media screen and (max-width: 1500px) {
   .statistics {
@@ -782,6 +998,13 @@ main {
   }
 }
 
+@media screen and (max-width: 1100px) {
+  .video-container {
+    width: 50%;
+    padding: 10px;
+  }
+}
+
 @media screen and (max-width: 1000px) {
   .cards {
     grid-template-columns: repeat(4, 1fr);
@@ -797,6 +1020,12 @@ main {
   .cards {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 5px;
+  }
+
+  .video-container {
+    width: 95%;
+    padding: 10px;
+    margin: 0 auto;
   }
 }
 
